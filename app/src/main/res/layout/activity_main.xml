@@ -40,5 +40,37 @@
         app:layout_constraintEnd_toEndOf="parent"
         />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Status Bar 제거"
+        android:id="@+id/btn_type_4"
+        app:layout_constraintTop_toBottomOf="@id/btn_type_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Status Bar 색깔 제어"
+        android:id="@+id/btn_type_5"
+        app:layout_constraintTop_toBottomOf="@id/btn_type_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Full Screen 1"
+        android:id="@+id/btn_type_6"
+        app:layout_constraintTop_toBottomOf="@id/btn_type_5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,6 +16,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn_type_1.setOnClickListener(this)
         btn_type_2.setOnClickListener(this)
         btn_type_3.setOnClickListener(this)
+        btn_type_4.setOnClickListener(this)
+        btn_type_5.setOnClickListener(this)
+        btn_type_6.setOnClickListener(this)
     }
 
 
@@ -41,6 +44,25 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 viewIntent = Intent(applicationContext, TitleBarCTypeActivity::class.java)
                 startActivity(viewIntent)
             }
+
+            R.id.btn_type_4 -> {
+                // Status Bar 없애기 -> 화면에 표시할 Activity 에 setContentView 위에
+                viewIntent = Intent(applicationContext, StatusBarActivity::class.java)
+                startActivity(viewIntent)
+            }
+
+            R.id.btn_type_5 -> {
+                // Status Bar 색깔 제어 -> 화면에 표시할 Activity 에 setContentView 위에
+                viewIntent = Intent(applicationContext, StatusBarColorActivity::class.java)
+                startActivity(viewIntent)
+            }
+
+            R.id.btn_type_6 -> {
+                // Status Bar 색깔 제어 -> 화면에 표시할 Activity 에 setContentView 위에
+                viewIntent = Intent(applicationContext, FullScreenATypeActivity::class.java)
+                startActivity(viewIntent)
+            }
+
         }
     }
 }

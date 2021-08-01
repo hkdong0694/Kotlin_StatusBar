@@ -9,10 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".TitleBarCTypeActivity"></activity>
-        <activity android:name=".TitleBarBTypeActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
-            />
+        <activity
+            android:name=".FullScreenBTypeActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
+        <activity android:name=".FullScreenATypeActivity" />
+        <activity android:name=".StatusBarColorActivity" />
+        <activity android:name=".StatusBarActivity" />
+        <activity android:name=".TitleBarCTypeActivity" />
+        <activity
+            android:name=".TitleBarBTypeActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity android:name=".TitleBarATypeActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
