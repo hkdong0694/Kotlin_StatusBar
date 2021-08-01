@@ -9,6 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
+        <activity android:name=".TitleBarCTypeActivity"></activity>
+        <activity android:name=".TitleBarBTypeActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            />
+        <activity android:name=".TitleBarATypeActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
