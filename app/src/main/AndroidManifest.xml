@@ -9,9 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity
-            android:name=".FullScreenBTypeActivity"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
         <activity android:name=".FullScreenATypeActivity" />
         <activity android:name=".StatusBarColorActivity" />
         <activity android:name=".StatusBarActivity" />

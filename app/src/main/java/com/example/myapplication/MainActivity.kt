@@ -26,39 +26,66 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         when(v?.id) {
             R.id.btn_type_1 -> {
-                // ActionBar 없애기 1 -> 화면에 표시할 Activity 에 상속을 Activity 로 해준다.
+                /**
+                 * ActionBar 없애기 1 -> 화면에 표시할 Activity 에 상속을 Activity 로 해준다.
+                 * class TitleBarATypeActivity : Activity()
+                 */
                 viewIntent = Intent(applicationContext, TitleBarATypeActivity::class.java)
                 startActivity(viewIntent)
             }
 
             R.id.btn_type_2 -> {
-                // ActionBar 없애기 2 -> 화면에 표시할 Activity 의 Manifest Theme 를
-                // android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" 설정
+                /**
+                 * ActionBar 없애기 2 -> 화면에 표시할 Activity 의 Manifest Theme 를
+                 * <activity android:name=".TitleBarBTypeActivity"
+                 *   android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+                 */
                 viewIntent = Intent(applicationContext, TitleBarBTypeActivity::class.java)
                 startActivity(viewIntent)
             }
 
             R.id.btn_type_3 -> {
-                // ActionBar 없애기 3 -> 화면에 표시할 Activity 에 setContentView 위에
-                // supportRequestWindowFeature(Window.FEATURE_NO_TITLE) 설정!
+                /**
+                 * ActionBar 없애기 3 -> 화면에 표시할 Activity 에 setContentView 위에
+                 * supportRequestWindowFeature(Window.FEATURE_NO_TITLE) 설정!
+                 */
                 viewIntent = Intent(applicationContext, TitleBarCTypeActivity::class.java)
                 startActivity(viewIntent)
             }
 
             R.id.btn_type_4 -> {
-                // Status Bar 없애기 -> 화면에 표시할 Activity 에 setContentView 위에
+                /**
+                 * Status Bar 없애기 -> 화면에 표시할 Activity 에 setContentView
+                 * if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                    API >= 30 이상부터는 이코드를 통해 StatusBar 제어
+                    window.insetsController?.hide(WindowInsets.Type.statusBars())
+                } else {
+                    API >= 30 이상부터는 Deprecated 되었다.
+                    window.setFlags(
+                    WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                    WindowManager.LayoutParams.FLAG_FULLSCREEN)
+                }
+                 */
                 viewIntent = Intent(applicationContext, StatusBarActivity::class.java)
                 startActivity(viewIntent)
             }
 
             R.id.btn_type_5 -> {
-                // Status Bar 색깔 제어 -> 화면에 표시할 Activity 에 setContentView 위에
+                /**
+                 * Status Bar 색깔 제어 -> 화면에 표시할 Activity 에 setContentView 위에
+                 *  val window = window
+                    window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+                    window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+                    window.statusBarColor = Color.parseColor("#BBBBBB")
+                 */
                 viewIntent = Intent(applicationContext, StatusBarColorActivity::class.java)
                 startActivity(viewIntent)
             }
 
             R.id.btn_type_6 -> {
-                // Status Bar 색깔 제어 -> 화면에 표시할 Activity 에 setContentView 위에
+                /**
+                 * Full Screen !
+                 */
                 viewIntent = Intent(applicationContext, FullScreenATypeActivity::class.java)
                 startActivity(viewIntent)
             }
